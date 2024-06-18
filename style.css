@@ -1,0 +1,150 @@
+:root {
+  --Darkcyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Verydarkblue: hsl(212, 21%, 14%);
+  --Darkgrayishblue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--Cream);
+}
+
+.container {
+  background-color: var(--White);
+}
+
+p {
+  font-size: 14px;
+}
+
+.text span {
+  font-family: "Montserrat";
+  color: var(--Darkgrayishblue);
+  letter-spacing: 0.5rem;
+  font-size: 14px;
+}
+
+.text h1:nth-child(2) {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-family: "Fraunces";
+  color: var(--Verydarkblue);
+}
+
+.text p:nth-child(3) {
+  color: var(--Darkgrayishblue);
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.text .price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.text .price h1,
+.text .price p {
+  flex: 1 1 50%;
+}
+
+.text .price h1 {
+  color: var(--Darkcyan);
+  font-family: "Fraunces";
+}
+
+.text .price p {
+  font-family: "Fraunces";
+  font-size: 1rem;
+  color: var(--Darkgrayishblue);
+  text-decoration: line-through;
+  width: 50%;
+}
+
+.text button {
+  flex: 1 1 100%;
+  background-color: var(--Darkcyan);
+  color: var(--White);
+  border: none;
+  height: 3rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.text button:hover {
+  background-color: var(--Verydarkblue);
+}
+
+/* laptop */
+
+@media screen and (min-width: 500px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .container {
+    width: 50%;
+    height: 33rem;
+    margin: auto;
+    display: flex;
+    border-radius: 1rem;
+    overflow: hidden;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .container .image {
+    height: 100%;
+  }
+
+  .container .image img.mobile {
+    display: none;
+  }
+
+  .container .image img.desktop {
+    display: block;
+  }
+
+  .container .image img {
+    height: 100%;
+  }
+
+  .container .text {
+    width: 50%;
+    margin: 2rem;
+  }
+}
+
+/* mobile */
+
+@media screen and (max-width: 550px) {
+  body {
+    margin: 0;
+  }
+
+  main .container {
+    overflow: hidden;
+    margin: 1rem;
+    border-radius: 1rem;
+  }
+
+  .container .image img.desktop {
+    display: none;
+  }
+  .container .image img.mobile {
+    display: block;
+  }
+
+  .image img {
+    width: 100%;
+  }
+
+  .container .text {
+    margin: 1.5rem;
+  }
+}
