@@ -45,17 +45,18 @@ p {
   align-items: center;
 }
 
-.text .price h1,
 .text .price p {
   flex: 1 1 50%;
 }
 
-.text .price h1 {
+.text .price p:nth-child(1) {
+  font-size: 1.7rem;
+  font-weight: 700;
   color: var(--Darkcyan);
   font-family: "Fraunces";
 }
 
-.text .price p {
+.text .price p:nth-child(2) {
   font-family: "Fraunces";
   font-size: 1rem;
   color: var(--Darkgrayishblue);
